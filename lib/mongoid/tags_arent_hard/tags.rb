@@ -1,7 +1,8 @@
 module Mongoid
   module TagsArentHard
-    class Tags < BasicObject
-      extend ::Origin::Extensions::Array::ClassMethods
+    class Tags < BasicObjectextend 
+      extend ::Mongoid::Extensions::Array::ClassMethods
+      extend ::Mongoid::Criteria::Queryable::Extensions::Array::ClassMethods
 
       attr_accessor :tag_list
       attr_accessor :options
